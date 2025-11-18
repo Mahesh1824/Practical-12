@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Example College — Home</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root{--brand:#1e3a8a;--accent:#06b6d4}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    .hero{background:linear-gradient(90deg, rgba(30,58,138,0.95), rgba(6,182,212,0.9)), url('https://picsum.photos/1400/700?blur=2') center/cover no-repeat;color:#fff}
+    .dept-card img{height:140px;object-fit:cover}
+    .feature{border-left:4px solid var(--brand);padding-left:1rem}
+    .footer{background:#0b1220;color:#cbd5e1}
+    .rounded-2xl{border-radius:1.25rem}
+    @media (max-width:767px){.hero{padding:4rem 1rem}.dept-card img{height:120px}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class="fa-solid fa-school fa-lg me-2 text-info"></i>
+      <span>Example College</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#departments">Departments</a></li>
+        <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-2"><button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="home" class="hero text-white py-5">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <h1 class="display-5 fw-bold">Welcome to Example College</h1>
+        <p class="lead">A place for curiosity, innovation and leadership. Explore our departments, courses, and student life.</p>
+        <div class="d-flex gap-2">
+          <a href="#admissions" class="btn btn-light btn-lg rounded-2xl">Apply Now</a>
+          <a href="#departments" class="btn btn-outline-light btn-lg rounded-2xl">Explore Departments</a>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-block">
+        <div class="card shadow-lg rounded-2xl overflow-hidden">
+          <img src="https://picsum.photos/500/350?random=1" class="w-100" alt="campus">
+          <div class="card-body">
+            <h5 class="card-title">Campus Tour</h5>
+            <p class="card-text small">Modern labs · Spacious library · Active clubs</p>
+            <a class="btn btn-sm btn-outline-primary" href="#contact">Book a Visit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-md-6">
+        <h2>About Us</h2>
+        <p>Example College has been nurturing talent since 1995. We offer undergraduate and postgraduate programs across science, engineering, arts, and management — focused on hands-on learning and employability.</p>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="feature mb-3">
+              <h6 class="mb-0">Industry-linked</h6>
+              <small>Regular internships & industry projects</small>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="feature mb-3">
+              <h6 class="mb-0">Scholarships</h6>
+              <small>Merit and need-based financial support</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 rounded-2xl shadow-sm overflow-hidden">
+          <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Campus video" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPARTMENTS -->
+<section id="departments" class="py-5 bg-light">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="mb-0">Departments</h2>
+      <a href="#" class="small">View All Departments →</a>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card dept-card h-100">
+          <img src="https://picsum.photos/600/300?random=11" class="card-img-top" alt="Computer Science">
+          <div class="card-body">
+            <h5 class="card-title">Computer Science</h5>
+            <p class="card-text small">B.Tech, M.Tech — AI, Data Science, Cybersecurity tracks.</p>
+            <a class="btn btn-sm btn-primary" href="#">View Courses</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card dept-card h-100">
+          <img src="https://picsum.photos/600/300?random=12" class="card-img-top" alt="Business">
+          <div class="card-body">
+            <h5 class="card-title">Business & Management</h5>
+            <p class="card-text small">BBA, MBA — Entrepreneurship & analytics programs.</p>
+            <a class="btn btn-sm btn-primary" href="#">View Courses</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card dept-card h-100">
+          <img src="https://picsum.photos/600/300?random=13" class="card-img-top" alt="Science">
+          <div class="card-body">
+            <h5 class="card-title">Sciences</h5>
+            <p class="card-text small">BSc, MSc — Physics, Chemistry, Biology, Environmental Science.</p>
+            <a class="btn btn-sm btn-primary" href="#">View Courses</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section id="admissions" class="py-5">
+  <div class="container">
+    <h2 class="mb-4">Admissions</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card p-3 h-100">
+          <h5>How to Apply</h5>
+          <ol>
+            <li>Check eligibility & important dates</li>
+            <li>Fill online application form</li>
+            <li>Upload documents & pay fee</li>
+            <li>Attend interview/entrance test (if applicable)</li>
+          </ol>
+          <a class="btn btn-success" href="#">Start Application</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-3 h-100">
+          <h5>Programs & Fees</h5>
+          <p class="small">Select program to see fee structure, scholarship availability and course details.</p>
+          <div class="accordion" id="feeAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ug">Undergraduate</button></h2>
+              <div id="ug" class="accordion-collapse collapse" data-bs-parent="#feeAccordion">
+                <div class="accordion-body small">Typical UG program duration: 3–4 years. Fees vary by program.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pg">Postgraduate</button></h2>
+              <div id="pg" class="accordion-collapse collapse" data-bs-parent="#feeAccordion">
+                <div class="accordion-body small">PG programs typically 1–2 years. Scholarships available for top applicants.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS / CAROUSEL -->
+<section id="events" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4">Latest Events</h2>
+    <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner rounded-2xl shadow-sm">
+        <div class="carousel-item active">
+          <img src="https://picsum.photos/1200/400?random=21" class="d-block w-100" alt="Event 1">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-2xl p-3">
+            <h5>Annual Tech Fest 2025</h5>
+            <p class="small">Hackathons, workshops, guest lectures.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1200/400?random=22" class="d-block w-100" alt="Event 2">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-2xl p-3">
+            <h5>Entrepreneurship Summit</h5>
+            <p class="small">Start-up pitches and mentorship sessions.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FACULTY SNAPSHOT -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-4">Faculty</h2>
+    <div class="row g-3">
+      <div class="col-6 col-md-3">
+        <div class="card text-center p-2">
+          <img src="https://picsum.photos/200/200?random=31" class="rounded-circle mx-auto d-block" style="width:80px;height:80px;object-fit:cover" alt="Prof">
+          <div class="card-body p-2">
+            <h6 class="mb-0">Dr. A. Sharma</h6>
+            <small>Head — CSE</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card text-center p-2">
+          <img src="https://picsum.photos/200/200?random=32" class="rounded-circle mx-auto d-block" style="width:80px;height:80px;object-fit:cover" alt="Prof">
+          <div class="card-body p-2">
+            <h6 class="mb-0">Prof. R. Mehta</h6>
+            <small>Management</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card text-center p-2">
+          <img src="https://picsum.photos/200/200?random=33" class="rounded-circle mx-auto d-block" style="width:80px;height:80px;object-fit:cover" alt="Prof">
+          <div class="card-body p-2">
+            <h6 class="mb-0">Dr. S. Iyer</h6>
+            <small>Sciences</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card text-center p-2">
+          <img src="https://picsum.photos/200/200?random=34" class="rounded-circle mx-auto d-block" style="width:80px;height:80px;object-fit:cover" alt="Prof">
+          <div class="card-body p-2">
+            <h6 class="mb-0">Dr. N. Roy</h6>
+            <small>Humanities</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5 bg-dark text-light">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h3>Contact Admissions</h3>
+        <p class="small">Questions about admission, courses or campus visits? Send us a message.</p>
+        <form id="contactForm" class="needs-validation" novalidate>
+          <div class="mb-3"><label class="form-label">Full name</label><input type="text" class="form-control" required></div>
+          <div class="mb-3"><label class="form-label">Email</label><input type="email" class="form-control" required></div>
+          <div class="mb-3"><label class="form-label">Message</label><textarea class="form-control" rows="4" required></textarea></div>
+          <button class="btn btn-info">Send Message</button>
+          <div id="contactAlert" class="mt-3" style="display:none"></div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h5>Campus Office</h5>
+        <p class="small mb-1">123 College Road, Cityname, State — 560001</p>
+        <p class="small mb-1">Phone: +91 80 1234 5678</p>
+        <p class="small mb-1">Email: info@examplecollege.edu</p>
+        <div class="ratio ratio-16x9 rounded mt-3 overflow-hidden">
+          <iframe src="https://maps.google.com/maps?q=university&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer py-4">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div>
+      <strong>Example College</strong> &middot; © <span id="year"></span>
+      <div class="small">Affiliated to State University · AICTE Approved</div>
+    </div>
+    <div class="text-end small">
+      <div>Follow us</div>
+      <a class="text-decoration-none text-info me-2" href="#"><i class="fab fa-facebook fa-lg"></i></a>
+      <a class="text-decoration-none text-info me-2" href="#"><i class="fab fa-instagram fa-lg"></i></a>
+      <a class="text-decoration-none text-info" href="#"><i class="fab fa-twitter fa-lg"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm" novalidate>
+          <div class="mb-3"><label class="form-label">Email</label><input type="email" id="loginEmail" class="form-control" required></div>
+          <div class="mb-3"><label class="form-label">Password</label><input type="password" id="loginPassword" class="form-control" required></div>
+          <div id="loginError" class="text-danger small" style="display:none"></div>
+          <button class="btn btn-primary">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Contact form fake submit
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!contactForm.checkValidity()) { contactForm.classList.add('was-validated'); return; }
+    const alertBox = document.getElementById('contactAlert');
+    alertBox.style.display = 'block';
+    alertBox.className = 'alert alert-success';
+    alertBox.textContent = 'Thanks — your message has been received. We will contact you shortly.';
+    contactForm.reset();
+  });
+
+  // Simple login demo (client-side only; replace with real auth)
+  const loginForm = document.getElementById('loginForm');
+  loginForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value.trim();
+    const pass = document.getElementById('loginPassword').value;
+    const err = document.getElementById('loginError');
+    // demo credentials: student@example.com / student123
+    if(email === 'student@example.com' && pass === 'student123'){
+      err.style.display = 'none';
+      var modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+      modal.hide();
+      alert('Logged in as student@example.com (demo)');
+    } else {
+      err.style.display = 'block'; err.textContent = 'Invalid credentials (demo). Use student@example.com / student123';
+    }
+  });
+
+  // Smooth scroll for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e){
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    });
+  });
+</script>
+</body>
+</html>
